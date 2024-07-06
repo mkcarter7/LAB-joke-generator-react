@@ -7,7 +7,6 @@ function Home() {
 
   function getJokes() {
     getJoke().then((newJoke) => {
-      console.log(newJoke);
       setJoke(newJoke);
       setPunchlineState('');
     });
@@ -38,7 +37,6 @@ function Home() {
       }}
     >
       <h1 id="joke">{joke.setup}</h1>
-      {console.log(punchlineState)}
       <button type="button" onClick={punchlineState ? getJokes : deliverPunchline}>
         {punchlineState ? 'Get a Joke' : 'Get Punchline'}
       </button>
